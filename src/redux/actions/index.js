@@ -4,7 +4,7 @@ export const REMOVE_FROM_FAVOURITE = "REMOVE_FROM_FAVOURITE";
 export const fetchJobs = (companyName) => async (dispatch) => {
   dispatch({ type: "FETCH_JOBS_REQUEST" });
   try {
-    const response = await fetch(`https://strive-benchmark.herokuapp.com/api/jobs?company=${companyName}`); // استفاده از نام کمپانی در URL
+    const response = await fetch(`https://strive-benchmark.herokuapp.com/api/jobs?company=${companyName}`);
     if (!response.ok) {
       throw new Error("Failed to fetch jobs");
     }
